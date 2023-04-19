@@ -58,10 +58,40 @@
         <action
             android:id="@+id/action_loginFragment_to_createFragment"
             app:destination="@id/createFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_haveAccFragment"
+            app:destination="@id/haveAccFragment" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
         android:name="com.example.reasa.CreateFragment"
         android:label="fragment_create"
-        tools:layout="@layout/fragment_create" />
+        tools:layout="@layout/fragment_create" >
+        <action
+            android:id="@+id/action_createFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/haveAccFragment"
+        android:name="com.example.reasa.HaveAccFragment"
+        android:label="fragment_have_acc"
+        tools:layout="@layout/fragment_have_acc" >
+        <action
+            android:id="@+id/action_haveAccFragment_to_congratsFragment"
+            app:destination="@id/congratsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratsFragment"
+        android:name="com.example.reasa.CongratsFragment"
+        android:label="fragment_congrats"
+        tools:layout="@layout/fragment_congrats" >
+        <action
+            android:id="@+id/action_congratsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.reasa.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
