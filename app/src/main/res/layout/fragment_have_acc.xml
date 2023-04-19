@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signup"
+        android:id="@+id/signin"
         android:layout_width="310dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
@@ -128,10 +128,10 @@
         android:layout_marginTop="16dp"
         android:text="or continue with"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="@+id/signin"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/signup"
-        app:layout_constraintTop_toBottomOf="@+id/signup" />
+        app:layout_constraintStart_toStartOf="@+id/signin"
+        app:layout_constraintTop_toBottomOf="@+id/signin" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -140,7 +140,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/img_2"
-        app:layout_constraintStart_toStartOf="@+id/signup"
+        app:layout_constraintStart_toStartOf="@+id/signin"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageView
@@ -161,7 +161,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:src="@drawable/img"
-        app:layout_constraintEnd_toEndOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="@+id/signin"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
@@ -172,11 +172,12 @@
         android:layout_marginTop="20dp"
         android:text="Don't have an account?"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/signup"
+        app:layout_constraintStart_toStartOf="@+id/signin"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -186,7 +187,7 @@
         android:textColor="#246BFC"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="@+id/signin"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
         tools:ignore="MissingConstraints" />

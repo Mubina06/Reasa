@@ -36,7 +36,11 @@ class HaveAccFragment : Fragment() {
         binding = FragmentHaveAccBinding.inflate(inflater, container, false)
 
         binding.signup.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_createFragment)
+            findNavController().navigate(R.id.action_haveAccFragment_to_createFragment)
+        }
+
+        binding.signup.setOnClickListener{
+            findNavController().navigate(R.id.action_haveAccFragment_to_congratsFragment)
         }
 
         return binding.root

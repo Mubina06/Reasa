@@ -70,6 +70,9 @@
         <action
             android:id="@+id/action_createFragment_to_congratsFragment"
             app:destination="@id/congratsFragment" />
+        <action
+            android:id="@+id/action_createFragment_to_haveAccFragment"
+            app:destination="@id/haveAccFragment" />
     </fragment>
     <fragment
         android:id="@+id/haveAccFragment"
@@ -79,6 +82,9 @@
         <action
             android:id="@+id/action_haveAccFragment_to_congratsFragment"
             app:destination="@id/congratsFragment" />
+        <action
+            android:id="@+id/action_haveAccFragment_to_createFragment"
+            app:destination="@id/createFragment" />
     </fragment>
     <fragment
         android:id="@+id/congratsFragment"
