@@ -45,5 +45,23 @@
         android:id="@+id/fivesFragment"
         android:name="com.example.reasa.FivesFragment"
         android:label="fragment_fives"
-        tools:layout="@layout/fragment_fives" />
+        tools:layout="@layout/fragment_fives" >
+        <action
+            android:id="@+id/action_fivesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.reasa.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.example.reasa.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" />
 </navigation>
