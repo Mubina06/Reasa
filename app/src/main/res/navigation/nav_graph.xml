@@ -92,12 +92,12 @@
         android:label="fragment_congrats"
         tools:layout="@layout/fragment_congrats" >
         <action
-            android:id="@+id/action_congratsFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_congratsFragment_to_userPageFragment"
+            app:destination="@id/userPageFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.reasa.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/userPageFragment"
+        android:name="com.example.reasa.UserPageFragment"
+        android:label="fragment_user_page"
+        tools:layout="@layout/fragment_user_page" />
 </navigation>
