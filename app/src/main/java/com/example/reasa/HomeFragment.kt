@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.reasa.Adapters.itemAdapter
 import com.example.reasa.databinding.FragmentHomeBinding
 
@@ -32,8 +33,17 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         val adapter= itemAdapter(ItemList.values())
+        binding.rv1.setHasFixedSize(true)
         binding.rv1.adapter = adapter
+
+
+
+        binding.notif.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_notificationFragment)
+        }
 
         return inflater.inflate(R.layout.fragment_home, container, false)
     }

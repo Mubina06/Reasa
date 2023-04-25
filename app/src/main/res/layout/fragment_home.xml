@@ -11,10 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:text="Good morning👋"
-        android:textSize="28sp"
         android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,6 +122,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         tools:listitem="@layout/button_item" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/rv2"
+        app:layout_constraintStart_toStartOf="@+id/rv2"
+        app:layout_constraintTop_toBottomOf="@+id/rv2"
+        tools:listitem="@layout/rec_item"
+        app:spanCount="2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menubar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/usermenu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

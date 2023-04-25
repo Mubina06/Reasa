@@ -2,8 +2,33 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="home" android:id="@+id/home" />
-    <item android:title="explore" android:id="@+id/explore" />
-    <item android:title="favorites" android:id="@+id/favorites" />
-    <item android:title="profile" android:id="@+id/profile" />
+    <item
+        android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:iconTint="#686868"/>
+
+    <item
+        android:title="Explore"
+        android:id="@+id/explore"
+        android:icon="@drawable/baseline_search_24"
+        android:iconTint="#686868"/>
+
+    <item
+        android:title="Favorites"
+        android:id="@+id/favorites"
+        android:icon="@drawable/baseline_favorite_24"
+        android:iconTint="#686868"/>
+
+    <item
+        android:id="@+id/message"
+        android:title="Message"
+        android:icon="@drawable/baseline_message_24"
+        android:iconTint="#686868"/>
+
+    <item
+        android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:iconTint="#686868"/>
 </menu>

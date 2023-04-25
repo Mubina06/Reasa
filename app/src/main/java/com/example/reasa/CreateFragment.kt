@@ -1,10 +1,12 @@
 package com.example.reasa
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.reasa.databinding.FragmentCreateBinding
 
@@ -40,6 +42,18 @@ class CreateFragment : Fragment() {
 
         binding.signin.setOnClickListener {
             findNavController().navigate(R.id.action_createFragment_to_haveAccFragment)
+        }
+
+        binding.signup.setOnClickListener {
+            val sharedPreference = this.getActivity()?.getSharedPreferences("pref", Context.MODE_PRIVATE)
+            val name = sharedPreference?.getString("mail", "")
+            if (name != null) {
+                if(!name.equals(binding.email)){
+                    Toast.makeText(requireContext(),"Wrong mail", Toast.LENGTH_SHORT).show()
+                }else{
+                    findNavController().navigate(R.id.action_createFragment_to_congratsFragment)
+                }
+            }
         }
 
         return binding.root

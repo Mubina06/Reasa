@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button5"
+        android:id="@+id/start"
         android:layout_width="310dp"
         android:layout_height="63dp"
         android:backgroundTint="#246BFC"

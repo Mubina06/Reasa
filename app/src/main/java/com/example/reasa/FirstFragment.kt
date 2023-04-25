@@ -1,5 +1,6 @@
 package com.example.reasa
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.reasa.databinding.FragmentCreateBinding
+import com.example.reasa.databinding.FragmentFirstBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -18,6 +21,8 @@ class FirstFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var binding: FragmentFirstBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +37,25 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
-        }, 3000)
+        binding = FragmentFirstBinding.inflate(inflater, container, false)
 
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        val sharedPreference = this.getActivity()?.getSharedPreferences("pref", Context.MODE_PRIVATE)
+        val name = sharedPreference?.getString("mail","")
+        if(name.equals("")) {
+            Handler(Looper.getMainLooper()).postDelayed(
+                {
+                    findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+                }, 3000    )
+        }
+        else{
+            Handler(Looper.getMainLooper()).postDelayed(
+                {
+                    findNavController().navigate(R.id.action_firstFragment_to_congratsFragment)
+                }, 3000    )
+        }
+        val binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
+
 
     }
 

@@ -33,7 +33,7 @@ class CongratsFragment : Fragment() {
     ): View? {
 
         Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+            findNavController().navigate(R.id.action_congratsFragment_to_homeFragment)
         }, 3000)
 
         return inflater.inflate(R.layout.fragment_congrats, container, false)

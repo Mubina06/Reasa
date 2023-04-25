@@ -11,14 +11,13 @@ import com.example.reasa.R
 
 class itemAdapter(val list: Array<ItemList>): RecyclerView.Adapter<itemAdapter.MyHolder>() {
 
+    var onItemClick : ((ItemList) -> Unit)? = null
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var photo = itemView.findViewById<ImageView>(R.id.photo)
         var star = itemView.findViewById<TextView>(R.id.star)
         var namee = itemView.findViewById<TextView>(R.id.namee)
         var city = itemView.findViewById<TextView>(R.id.city)
         var price = itemView.findViewById<TextView>(R.id.price)
-
-
 
     }
 
@@ -34,6 +33,10 @@ class itemAdapter(val list: Array<ItemList>): RecyclerView.Adapter<itemAdapter.M
         holder.namee.setText(item.namee)
         holder.city.setText(item.city)
         holder.price.setText(item.price)
+
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(item)
+        }
 
     }
 
