@@ -50,7 +50,7 @@ class FirstFragment : Fragment() {
         else{
             Handler(Looper.getMainLooper()).postDelayed(
                 {
-                    findNavController().navigate(R.id.action_firstFragment_to_congratsFragment)
+                    findNavController().navigate(R.id.action_firstFragment_to_homeFragment)
                 }, 3000    )
         }
         val binding = FragmentFirstBinding.inflate(inflater, container, false)

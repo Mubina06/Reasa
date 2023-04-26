@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_firstFragment_to_congratsFragment"
             app:destination="@id/congratsFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -104,44 +107,71 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_exploreFragment"
-            app:destination="@id/exploreFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
         <action
             android:id="@+id/action_homeFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_messageFragment"
-            app:destination="@id/messageFragment" />
+            android:id="@+id/action_homeFragment_to_recFragment"
+            app:destination="@id/recFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_homeFragment_to_profileeFragment"
+            app:destination="@id/profileeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_messageeFragment"
+            app:destination="@id/messageeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exploreeFragment"
+            app:destination="@id/exploreeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/exploreFragment"
-        android:name="com.example.reasa.ExploreFragment"
-        android:label="fragment_explore"
-        tools:layout="@layout/fragment_explore" />
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.reasa.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/notificationFragment"
         android:name="com.example.reasa.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
-        android:id="@+id/messageFragment"
-        android:name="com.example.reasa.MessageFragment"
-        android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        android:id="@+id/recFragment"
+        android:name="com.example.reasa.RecFragment"
+        android:label="fragment_rec"
+        tools:layout="@layout/fragment_rec" >
+        <action
+            android:id="@+id/action_recFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.reasa.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/profileeFragment"
+        android:name="com.example.reasa.profileeFragment"
+        android:label="fragment_profilee"
+        tools:layout="@layout/fragment_profilee" />
+    <fragment
+        android:id="@+id/exploreeFragment"
+        android:name="com.example.reasa.ExploreeFragment"
+        android:label="fragment_exploree"
+        tools:layout="@layout/fragment_exploree" >
+        <action
+            android:id="@+id/action_exploreeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageeFragment"
+        android:name="com.example.reasa.MessageeFragment"
+        android:label="fragment_messagee"
+        tools:layout="@layout/fragment_messagee" >
+        <action
+            android:id="@+id/action_messageeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

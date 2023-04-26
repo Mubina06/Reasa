@@ -1,4 +1,4 @@
-package com.example.reasa.Adapters
+package com.example.reasa.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.reasa.HomeFragment
 import com.example.reasa.ItemList
 import com.example.reasa.R
 
-class itemAdapter(val list: Array<ItemList>): RecyclerView.Adapter<itemAdapter.MyHolder>() {
+class ItemAdapter(val listrec: MutableList<ItemList>, homeFragment: HomeFragment): RecyclerView.Adapter<ItemAdapter.MyHolder>() {
 
     var onItemClick : ((ItemList) -> Unit)? = null
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -27,21 +28,21 @@ class itemAdapter(val list: Array<ItemList>): RecyclerView.Adapter<itemAdapter.M
     }
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
-        var item = list.get(position)
-        holder.photo.setImageResource(item.photo)
-        holder.star.setText(item.star)
-        holder.namee.setText(item.namee)
-        holder.city.setText(item.city)
-        holder.price.setText(item.price)
+        var itemrec = listrec.get(position)
+        holder.photo.setImageResource(itemrec.photo)
+        holder.star.setText(itemrec.star)
+        holder.namee.setText(itemrec.namee)
+        holder.city.setText(itemrec.city)
+        holder.price.setText(itemrec.price)
 
         holder.itemView.setOnClickListener{
-            onItemClick?.invoke(item)
+            onItemClick?.invoke(itemrec)
         }
 
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return listrec.size
     }
 
 }
