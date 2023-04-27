@@ -13,18 +13,18 @@ import com.example.reasa.recitems
 
 class ItemExpAdapter(val listexprec: MutableList<recitems>, exploreeFragment: ExploreeFragment): RecyclerView.Adapter<ItemExpAdapter.MyHolder>() {
 
-    var onItemClick : ((ItemList) -> Unit)? = null
+    var onItemClick : ((recitems) -> Unit)? = null
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        var photo = itemView.findViewById<ImageView>(R.id.photo)
-        var star = itemView.findViewById<TextView>(R.id.star)
-        var namee = itemView.findViewById<TextView>(R.id.namee)
-        var city = itemView.findViewById<TextView>(R.id.city)
-        var price = itemView.findViewById<TextView>(R.id.price)
+        var photo = itemView.findViewById<ImageView>(R.id.mainPhoto)
+        var star = itemView.findViewById<TextView>(R.id.mstar)
+        var namee = itemView.findViewById<TextView>(R.id.textView14)
+        var city = itemView.findViewById<TextView>(R.id.textView15)
+        var price = itemView.findViewById<TextView>(R.id.mprice)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
-        var itemView = MyHolder(LayoutInflater.from(parent.context).inflate(R.layout.featured_item, parent, false))
+        var itemView = MyHolder(LayoutInflater.from(parent.context).inflate(R.layout.rec_item, parent, false))
         return itemView
     }
 

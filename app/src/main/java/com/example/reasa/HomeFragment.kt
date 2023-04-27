@@ -47,11 +47,11 @@ class HomeFragment : Fragment() {
 
         item = mutableListOf<ItemList>()
         item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        item.add(ItemList(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        item.add(ItemList(R.drawable.img_4, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        item.add(ItemList(R.drawable.img_5, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        item.add(ItemList(R.drawable.img_6, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        item.add(ItemList(R.drawable.img_7, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        item.add(ItemList(R.drawable.img_8, "4.7", "Modernica Apart", "New York", "$39 / night"))
         adapter = ItemAdapter(item, this)
 
         binding.rv1.adapter = adapter
@@ -60,11 +60,11 @@ class HomeFragment : Fragment() {
 
         ritems = mutableListOf<recitems>()
         ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        ritems.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        ritems.add(recitems(R.drawable.img_4, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        ritems.add(recitems(R.drawable.img_5, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        ritems.add(recitems(R.drawable.img_6, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        ritems.add(recitems(R.drawable.img_7, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        ritems.add(recitems(R.drawable.img_8, "4.7", "Modernica Apart", "New York", "$39 / night"))
         recItemAdapter = RecItemAdapter(ritems, this)
 
         binding.rv3.adapter = recItemAdapter
@@ -87,6 +87,10 @@ class HomeFragment : Fragment() {
 
         binding.notif.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_notificationFragment)
+        }
+
+        binding.seeall2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_recFragment)
         }
 
 

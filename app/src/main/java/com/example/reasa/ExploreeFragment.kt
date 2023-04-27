@@ -43,11 +43,18 @@ class ExploreeFragment : Fragment() {
 
         exitem = mutableListOf<recitems>()
         exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_4, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_5, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_6, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_7, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_8, "4.7", "Modernica Apart", "New York", "$39 / night"))
         exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
-        exitem.add(recitems(R.drawable.img_3, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_4, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_5, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_6, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_7, "4.7", "Modernica Apart", "New York", "$39 / night"))
+        exitem.add(recitems(R.drawable.img_8, "4.7", "Modernica Apart", "New York", "$39 / night"))
+
         recitadapter = ItemExpAdapter(exitem, this)
 
         binding.rvexp.adapter = recitadapter

@@ -115,9 +115,10 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.836"
-                app:layout_constraintStart_toEndOf="@+id/price"
+                app:layout_constraintStart_toEndOf="@+id/mprice"
                 app:layout_constraintTop_toBottomOf="@+id/textView14"
-                app:srcCompat="@drawable/baseline_favorite_24" />
+                app:srcCompat="@drawable/blue_fav"
+                tools:ignore="UnknownIdInLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

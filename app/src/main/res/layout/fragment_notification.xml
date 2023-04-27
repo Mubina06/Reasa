@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/backn"
         android:layout_width="26dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
@@ -28,7 +28,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintStart_toEndOf="@+id/backn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
